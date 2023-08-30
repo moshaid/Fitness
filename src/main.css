@@ -1,0 +1,51 @@
+header {
+    background-color: #094c8b;
+}
+
+.cover-img {
+    background-image: url("./image/workFit.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.cover-info {
+    left: 10rem;
+    bottom: 0;
+}
+
+ .about-profile {
+    min-width: 385px;
+} 
+
+.gym-profile {
+    min-width: 576px;
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        display: block;
+    }
+
+    .icon-container >  div {
+        padding: 0;
+    }
+
+    .about-profile, .about-container img {
+        width: 90%;
+    }
+
+    .cover-info {
+        left: 1rem;
+        width: 50%;
+    }
+}
