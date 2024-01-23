@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import '../main.css';
+import { Link } from 'react-router-dom';
 import fitnessLogo from '../image/fitnessLogo.jpg';
+import '../main.css';
 
 class NavBar extends Component {
     state = {
@@ -18,20 +19,22 @@ class NavBar extends Component {
             <React.Fragment>
                 <header className="p-2 md:flex md:justify-between items-center fixed w-full">
                     <div className="flex items-center justify-between md:w-7/12">
-                            <a href="#" className="flex items-center md:pl-2 sm:p-0">
+                            <Link to="/" className="flex items-center md:pl-2 sm:p-0">
                                 <img src={fitnessLogo} className="rounded h-10 mx-2" alt="Fitness-Logo" />
                                 <h2 className="font-bold">FitHUB</h2>
-                            </a>
+                            </Link>
 
                             <div className="pr-4 md:hidden">
-                                <a href="#" className="text-white">LOGIN</a>
-                                <button className="mx-2 py-1 px-2  bg-blue-500 hover:bg-blue-700 text-white rounded-full" >SIGN UP</button>
+                                <Link to="/Login" className="text-white">LOGIN</Link>
+                                <Link to="/register">
+                                    <button className="mx-2 py-1 px-2  bg-blue-500 hover:bg-blue-700 text-white rounded-full" >SIGN UP</button>
+                                </Link>
                             </div>
 
                             <nav className="md:flex hidden pr-2">
-                                <a href="#" className="block text-white font-semibold px-4">About</a>
-                                <a href="#" className="block text-white font-semibold px-4">Store</a>
-                                <a href="#" className="block text-white font-semibold px-4">Contact</a>
+                                <Link to="/" className="block text-white font-semibold px-4">About</Link>
+                                <Link to="/" className="block text-white font-semibold px-4">Store</Link>
+                                <Link to="/" className="block text-white font-semibold px-4">Contact</Link>
                             </nav>
 
                         <div className="md:hidden">
@@ -46,15 +49,17 @@ class NavBar extends Component {
 
                     {this.state.on && (
                         <nav >
-                            <a href="#" className="block text-white font-semibold">About</a>
-                            <a href="#" className="block text-white font-semibold">Store</a>
-                            <a href="#" className="block text-white font-semibold">Contact</a>
+                            <Link to="/" className="block text-white font-semibold">About</Link>
+                            <Link to="/" className="block text-white font-semibold">Store</Link>
+                            <Link to="/" className="block text-white font-semibold">Contact</Link>
                         </nav>
                     )}
 
                         <nav className="hamburger hidden pr-2">
-                            <a href="#" className="text-white">LOGIN</a>
-                            <button className="mx-2 py-1 px-2  bg-blue-500 hover:bg-blue-700 text-white rounded-full" >SIGN UP</button>
+                            <Link to="/Login" className="text-white">LOGIN</Link>
+                            <Link to="/register">
+                                <button className="mx-2 py-1 px-2  bg-blue-500 hover:bg-blue-700 text-white rounded-full" >SIGN UP</button>
+                            </Link>
                         </nav>
 
                 </header>
